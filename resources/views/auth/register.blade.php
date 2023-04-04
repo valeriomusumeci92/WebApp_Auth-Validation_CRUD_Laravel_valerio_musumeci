@@ -1,50 +1,45 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-xl-9 mx-auto">
-            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
-              <div class="card-img-left d-none d-md-flex">
-                <!-- Background image for card set in CSS! -->
-              </div>
-              <div class="card-body p-4 p-sm-5">
-                <h5 class="card-title text-center mb-5 fw-light fs-5">Register</h5>
-                <form method="POST" action="{{ route ('register') }}">
-                   @csrf
+   
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5">Registrati</h5>
+              <form method="POST" action="{{ route ('register')}}">
+                  @csrf
                 <div class="form-floating mb-3">
-                    <input name="username" type="text" class="form-control" id="floatingInputUsername"placeholder="myusername" required autofocus>
-                    <label for="floatingInputUsername">Username</label>
+                  <input type="text" name= "name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="name" value="{{ old('name') }}">
+                  <label for="name">Aggiungi username</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input name= "email" type="email" class="form-control @error('email') is-invalid @enderror" id="name" placeholder="email" value="{{ old('email') }}">
+                  <label for="name">Aggiungi email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input name= "password" type="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="password" value="{{ old('password') }}">
+                  <label for="name">Aggiungi password</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" name= "password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password confirmation" placeholder="name" value="{{ old('password_confirmation') }}">
+                  <label for="name">Conferma password</label>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <input name="email" type="email" class="form-control" id="floatingInputEmail" placeholder="your@email.com">
-                    <label for="floatingInputEmail">Email address</label>
-                  </div>
-
-                  <hr>
-
-                  <div class="form-floating mb-3">
-                    <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                  </div>
-
-                  <div class="d-grid mb-2">
-                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Register</button>
-                  </div>
-
-                  <a class="d-block text-center mt-2 small" href="#">Have an account? Sign In</a>
-
-
-
-
-
-
-
-                </form>
-              </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                  <label class="form-check-label" for="rememberPasswordCheck">
+                    Remember password
+                  </label>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">
+                  Registrati
+                 </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-
-
+    </div>
 </x-layout>
