@@ -13,7 +13,7 @@
         @csrf
         <div class="mb-3">
           <label for="title" class="form-label">Titolo annuncio</label>
-          <input wire:model="title" type="text" class="form-control" @error('title') is-invalid @enderror>
+          <input wire:model="title" type="text" class="form-control" @error('title') is-invalid @enderror">
         @error('title')
         {{ $message }}
         @enderror
@@ -21,7 +21,7 @@
         
         <div class="mb-3">
           <label for="body" class="form-label">Descrizione</label>
-          <textarea wire:model="body" type="text" class="form-control" @error('body') is-invalid @enderror> </textarea>
+          <textarea wire:model="body" type="text" class="form-control" @error('body') is-invalid @enderror"> </textarea>
         </div>
         @error('body')
         {{ $message }}
@@ -29,7 +29,7 @@
         
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input wire:model="price" type="number" class="form-control" @error('price') is-invalid @enderror>
+            <input wire:model="price" type="number" class="form-control" @error('price') is-invalid @enderror">
             @error('price')
              {{ $message }}
              @enderror
