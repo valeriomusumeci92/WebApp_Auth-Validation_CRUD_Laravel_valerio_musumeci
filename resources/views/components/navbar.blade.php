@@ -1,7 +1,5 @@
-<x-layout>
 
-  
-  <nav class="navbar navbar-expand-lg bg-custom-navbar">
+ <nav class="navbar navbar-expand-lg bg-custom-navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,13 +11,12 @@
             {{-- fortyfi ha una rotta home definita nella sua config nell'HREF QUA indico solo / questo slash,uri, si rifà alla rotta presente in fotyfi che trovo in cartella Providers -> RouteServiceProviders e lasciare solo / --}}
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>
            @guest
+           
            <li class="nav-item">
             <a class="nav-link" href="{{ route ('register')}}">Registrati</a>
           </li>
@@ -28,6 +25,9 @@
           </li>
            {{-- logica di visualizzazione se l'utente è loggato --}}
          @else
+         <li class="nav-item">
+          <a class="nav-link" href="{{ route ('announcements.create') }}">Crea Annuncio</a>
+        </li>
          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{-- tramite auth::user ci fa accedere i dati dell'utente in qualsiasi punto del nostro applicativo, dico di accedere ai dati dell'utente e con ->name dico di quei dati dammi
@@ -58,8 +58,7 @@
       </div>
     </div>
   </nav>
-  
 
 
 
-</x-layout>
+

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AnnouncementsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+route::get('/nuovo/annuncio', [AnnouncementsController::class , 'createAnnouncement'])->name('announcements.create');
