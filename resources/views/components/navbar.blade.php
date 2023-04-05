@@ -11,6 +11,9 @@
             {{-- fortyfi ha una rotta home definita nella sua config nell'HREF QUA indico solo / questo slash,uri, si rifà alla rotta presente in fotyfi che trovo in cartella Providers -> RouteServiceProviders e lasciare solo / --}}
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('announcements.index') }}">Annunci</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorie
@@ -21,9 +24,6 @@
               <li><hr class="dropdown-divider"></li>
               @endforeach
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
           </li>
            @guest
            

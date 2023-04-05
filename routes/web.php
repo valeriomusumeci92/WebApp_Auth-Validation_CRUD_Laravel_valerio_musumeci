@@ -21,3 +21,7 @@ Route::get('/', [FrontController::class , 'welcome'])->name('welcome');
 Route::get('/nuovo/annuncio', [AnnouncementsController::class , 'createAnnouncement'])->middleware('auth')->name('announcements.create');
 
 Route::get('/categoria/{category}', [FrontController::class , 'categoryShow'])->name('categoryShow');
+
+Route::get('/dettaglio/annuncio/{announcement}' , [AnnouncementsController::class, 'showAnnouncement'])->name('announcements.show');
+
+Route::get('/tutti/annunci' , [AnnouncementsController::class, 'indexAnnouncement'])->name('announcements.index');

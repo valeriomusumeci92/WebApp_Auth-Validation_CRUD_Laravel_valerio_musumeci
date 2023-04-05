@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Announcement;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Announcement extends Model
 {
@@ -16,6 +17,11 @@ class Announcement extends Model
 
     public function user (){
         return $this->belongsTo(User::class);
+    }
+
+    public function indexAnnouncement (){
+        $announcemets = Announcement::all();
+        return view ('announcements.index' , compact('announcements'));
     }
 
 }
