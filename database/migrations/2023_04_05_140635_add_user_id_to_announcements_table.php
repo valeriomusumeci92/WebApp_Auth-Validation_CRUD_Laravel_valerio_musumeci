@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('announcements', function (Blueprint $table) {
-            // QUA AGGIUNGO UNA FOREING KEY DELLE CATEGORIE
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('SET NULL');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -24,8 +23,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('announcements', function (Blueprint $table) {
-            $table->dropForeign(['category_id']);
-            $table->dropColumn(['category_id']);
+           $table->dropForeign(['user_id']);
+           $table->dropColumn(['user_id']);
+
         });
     }
 };
