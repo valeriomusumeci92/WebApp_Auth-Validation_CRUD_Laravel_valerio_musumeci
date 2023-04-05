@@ -2,22 +2,37 @@
     
 <div>
     <h1>Crea il tuo annuncio!</h1>
+
+    @if(session()->has('message'))
+    <div class="d-flex justify-content-center my-2 alert alert-success">
+      {{ session('message') }}
+    </div>
+    @endif
+
     <form wire:submit.prevent="store">
         @csrf
         <div class="mb-3">
           <label for="title" class="form-label">Titolo annuncio</label>
-          <input wire:model="title" type="text" class="form-control">
-        
+          <input wire:model="title" type="text" class="form-control" @error('title') is-invalid @enderror>
+        @error('title')
+        {{ $message }}
+        @enderror
         </div>
         
         <div class="mb-3">
           <label for="body" class="form-label">Descrizione</label>
-          <textarea wire:model="body" type="text" class="form-control"> </textarea>
+          <textarea wire:model="body" type="text" class="form-control" @error('body') is-invalid @enderror> </textarea>
         </div>
+        @error('body')
+        {{ $message }}
+        @enderror
         
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input wire:model="price" type="number" class="form-control">
+            <input wire:model="price" type="number" class="form-control" @error('price') is-invalid @enderror>
+            @error('price')
+             {{ $message }}
+             @enderror
             
           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
