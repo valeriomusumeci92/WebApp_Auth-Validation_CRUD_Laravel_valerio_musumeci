@@ -42,7 +42,7 @@
             <a class="nav-link dropdown-toggle text-light-custom" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{-- tramite auth::user ci fa accedere i dati dell'utente in qualsiasi punto del nostro applicativo, dico di accedere ai dati dell'utente e con ->name dico di quei dati dammi
               il campo name --}}
-                {{Auth::user()->name}} 
+              <i class="fa-solid fa-user"></i> {{Auth::user()->name}} 
             </a>
             
             <ul class="dropdown-menu ">

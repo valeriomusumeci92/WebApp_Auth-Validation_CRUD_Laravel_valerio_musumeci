@@ -2,6 +2,7 @@
    --main-color: #264653;
    --main-light-color: #f8f7f7;
    --secondary-color: #f4a261 ;
+   --tertiary-color: #2a9d8f;
 }
 
 body{
@@ -74,6 +75,24 @@ body{
     padding: 0.75rem 1rem;
   }
 
-  /* Card Ultimi Annunci */
+  /* INIZIO CSS CARD */
+
+  .card{
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: var(--main-light-color);
+  }
+
+  .btn-category-custom{
+    background-color: var(--secondary-color);
+    width: 80%;
+  }
+
+  .btn-go-to-custom{
+    background-color: var(--tertiary-color);
+    width: 80%;
+  }
+
+  /* FINE CSS CARD */
 
   
