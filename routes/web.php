@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementsController;
 
 /*
@@ -25,3 +26,6 @@ Route::get('/categoria/{category}', [FrontController::class , 'categoryShow'])->
 Route::get('/dettaglio/annuncio/{announcement}' , [AnnouncementsController::class, 'showAnnouncement'])->name('announcements.show');
 
 Route::get('/tutti/annunci' , [AnnouncementsController::class, 'indexAnnouncement'])->name('announcements.index');
+
+// Home revisore
+Route::get('/revisor/home' , [RevisorController::class, 'index'])->name('revisor.index');
