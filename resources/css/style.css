@@ -111,4 +111,14 @@ body{
 
   /* FINE CSS CARD */
 
+  /* INIZIO CSS CAROUSEL */
+
+  .carousel-inner{
+    height: 400px;
+    object-fit: cover;
+    
+  }
+
+  /* FINE CSS CAROUSEL */
+
   

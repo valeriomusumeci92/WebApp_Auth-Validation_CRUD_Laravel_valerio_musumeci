@@ -3,12 +3,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 p-5">
-            <h1 class="display-2">Annuncio {{ $announcement->title }}</h1>
+            <h1 class="display-2 text-main-color fw-bold py-2">Annuncio {{ $announcement->title }}</h1>
         </div>
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row ">
         <div class="col-12">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -31,6 +31,10 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
+        <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
+          <div class="card shadow" style="width: 18rem;">
+              <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="...">
+              <div class="card-body text-center">
               <h5 class="card-title">Titolo: {{$announcement->title}} </h5>
               <p class="card-text">Descrizione: {{$announcement->body}}  </p>
               <p class="card-text">Prezzo: {{$announcement->price}}</p>
