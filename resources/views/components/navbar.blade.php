@@ -38,6 +38,16 @@
          <li class="nav-item">
           <a class="nav-link text-light-custom" href="{{ route ('announcements.create') }}">Crea Annuncio</a>
         </li>
+        @if (Auth::user()->is_revisor)
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-primary btn-sm position-relative" href="{{ route('revisor.index') }}">Zona revisore</a>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{App\Models\Announcement::toBeRevisionedCount()}}
+            <span class="visually-hidden"> unread messages </span>
+          </span>
+        </a>
+      </li>
+      @endif
          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light-custom" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{-- tramite auth::user ci fa accedere i dati dell'utente in qualsiasi punto del nostro applicativo, dico di accedere ai dati dell'utente e con ->name dico di quei dati dammi
