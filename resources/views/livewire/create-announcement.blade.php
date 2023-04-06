@@ -9,6 +9,12 @@
     </div>
     @endif
 
+    @if(session()->has('message.revisor'))
+    <div class="d-flex justify-content-center my-2 alert alert-success">
+      {{ session('message.revisor') }}
+    </div>
+    @endif
+
     <form wire:submit.prevent="store">
         @csrf
         <div class="mb-3">
