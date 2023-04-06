@@ -1,21 +1,21 @@
 
- <nav class="navbar navbar-expand-lg bg-custom-navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Presto.it</a>
+ <nav class="navbar navbar-expand-lg bg-custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-light-custom" href="/">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             {{-- fortyfi ha una rotta home definita nella sua config nell'HREF QUA indico solo / questo slash,uri, si rifà alla rotta presente in fotyfi che trovo in cartella Providers -> RouteServiceProviders e lasciare solo / --}}
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link text-light-custom" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('announcements.index') }}">Annunci</a>
+            <a class="nav-link text-light-custom" href="{{ route('announcements.index') }}">Annunci</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-light-custom" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorie
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
@@ -28,7 +28,7 @@
            @guest
            
            <li class="nav-item">
-            <a class="nav-link" href="{{ route ('register')}}">Registrati</a>
+            <a class="nav-link text-light-custom" href="{{ route ('register')}}">Registrati</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn btn-outline-warning" href="{{ route ('login')}}">Login</a>
@@ -36,16 +36,16 @@
            {{-- logica di visualizzazione se l'utente è loggato --}}
          @else
          <li class="nav-item">
-          <a class="nav-link" href="{{ route ('announcements.create') }}">Crea Annuncio</a>
+          <a class="nav-link text-light-custom" href="{{ route ('announcements.create') }}">Crea Annuncio</a>
         </li>
          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-light-custom" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{-- tramite auth::user ci fa accedere i dati dell'utente in qualsiasi punto del nostro applicativo, dico di accedere ai dati dell'utente e con ->name dico di quei dati dammi
               il campo name --}}
                 {{Auth::user()->name}} 
             </a>
             
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu ">
               <li><a class="dropdown-item" href="#">Profile</a></li>
               <li><hr class="dropdown-divider"></li>
               

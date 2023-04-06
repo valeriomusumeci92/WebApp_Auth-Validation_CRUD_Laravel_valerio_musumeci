@@ -1,6 +1,6 @@
 <x-layout>
     
-    <div class="container">
+    <div class="container padding-top-custom">
         <div class="row">
             <div class="col-12 text-center">
                 <h1>Presto.it</h1>

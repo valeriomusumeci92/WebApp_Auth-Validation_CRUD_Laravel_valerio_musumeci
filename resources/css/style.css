@@ -1,11 +1,56 @@
-body{
-    background-color: #f8f7f7;
+:root{
+   --main-color: #264653;
+   --main-light-color: #f8f7f7;
+   --secondary-color: #f4a261 ;
 }
 
-.bg-custom-navbar{
-    background-color: #f4a261;
-    
+body{
+    background-color: var(--body-color);
 }
+
+/* INIZIO CSS NAVBAR */
+
+.bg-custom-navbar{
+    background-color: var(--main-color);
+}
+.text-light-custom{
+  color: var(--main-light-color);
+}
+.nav-link{
+  margin: 0px 5px;
+}
+.nav-link:hover{
+  color: var(--secondary-color);
+}
+.nav-link:focus{
+  color: var(--secondary-color);
+}
+.nav-link:active{
+  color: var(--secondary-color);
+}
+.navbar-brand:hover{
+  color: var(--secondary-color);
+}
+.navbar-brand:focus{
+  color: var(--secondary-color);
+}
+.navbar-brand:active{
+  color: var(--secondary-color);
+}
+
+/* FINE CSS NAVBAR */
+
+
+/* padding per navbar fix */
+.padding-top-custom{
+  padding-top: 56px;
+}
+
+/* INIZIO CSS HEADER */
+
+
+
+/* FINE CSS HEADER */
 
 /* css login  */
 

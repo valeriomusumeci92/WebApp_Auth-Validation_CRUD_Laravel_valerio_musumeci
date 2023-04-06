@@ -1,6 +1,6 @@
 <x-layout>
 
-<div class="container-fluid p-5 bg-gradient bg-succes shadow mb-4">
+<div class="container-fluid padding-top-custom bg-gradient bg-succes shadow mb-4">
     <div class="row">
         <div class="col-12 text-light p-5">
             <h1 class="display-2">Annuncio {{$announcement->title }}</h1>
