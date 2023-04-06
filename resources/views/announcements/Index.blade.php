@@ -9,7 +9,7 @@
     </div>
     <div class="container text-center">
         <div class="row align-content-center">
-            @foreach ($announcements as $announcement)
+            @forealse ($announcements as $announcement)
             <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
                 <div class="card shadow" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="...">
@@ -24,7 +24,13 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empy
+            <div class="col-12">
+                <div class="alert alert-warning py-3 shadow">
+                    <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare il nome del tuo annuncio</p>
+                </div>
+            </div>
+            @endforelse
             {{$announcements->links()}}
         </div>
     </div>
