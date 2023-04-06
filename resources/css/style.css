@@ -5,6 +5,22 @@
    --tertiary-color: #2a9d8f;
 }
 
+.text-main-color{
+  color: var(--main-color);
+}
+
+.text-main-light-color{
+  color: var(--main-light-color);
+}
+
+.text-secondary-color{
+  color: var(--secondary-color);
+}
+
+.text-tertiary-color{
+  color: var(--tertiary-color);
+}
+
 body{
     background-color: var(--body-color);
 }
