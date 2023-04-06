@@ -2,8 +2,8 @@
 
 <div class="container-fluid padding-top-custom bg-gradient bg-succes shadow mb-4">
     <div class="row">
-        <div class="col-12 text-light p-5">
-            <h1 class="display-2">Annuncio {{$announcement->title }}</h1>
+        <div class="col-12 p-5">
+            <h1 class="display-2 text-main-color fw-bold">Annuncio {{$announcement->title }}</h1>
         </div>
     </div>
 </div>
@@ -14,14 +14,12 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
-
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
-                            
-                            <div class="carousel-item active">
-                                <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
-                            </div>
-                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
+                    </div>   
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-ride="#showCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
