@@ -1,10 +1,16 @@
 <x-layout>
-    
+
+   
     <div class="container padding-top-custom">
         <div class="row justify-content-evenly">
             <div class="col-12 text-center">
                 <h1>Presto.it</h1>
                 <p class="h2 my-2 fw-bold ">I nostri annunci</p>
+                @if (session('access.denied'))
+                    <div class="alert alert-danger">
+                        {{ session('access.denied') }}
+                    </div>
+                @endif
                 <div class="row align-content-center">
                 @foreach($announcements as $announcement)
                     <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
