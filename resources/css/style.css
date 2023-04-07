@@ -2,11 +2,15 @@
    --main-color: #264653;
    --dark-main-color: #102f3b;
    --main-light-color: #f8f7f7;
+   --body-color: #cfcece;
    --secondary-color: #f4a261 ;
    --tertiary-color: #2a9d8f;
    --accent-color: #e9c46a;
 }
 
+body{
+  background-color: var(--body-color);
+}
 .text-main-color{
   color: var(--main-color);
 }
@@ -74,7 +78,34 @@ body{
 
 /* INIZIO CSS HEADER */
 
+.page-header { 
+  /* immagine di prova */
+  background: url(https://easetemplate.com/free-website-templates/hike/images/pageheader.jpg)no-repeat;
+  position: relative; 
+  background-size: cover; 
+}
+.page-caption { 
+  padding-top: 170px; 
+  padding-bottom: 174px; 
+}
+.page-title { 
+  font-size: 46px; 
+  line-height: 1; 
+  color: #fff; 
+  font-weight: 600; 
+  text-align: center; 
+}
 
+.card-section { 
+  position: relative; 
+  bottom: 60px; 
+}
+.card-block { 
+  padding: 80px; 
+}
+.section-title { 
+  margin-bottom: 60px; 
+}
 
 /* FINE CSS HEADER */
 
