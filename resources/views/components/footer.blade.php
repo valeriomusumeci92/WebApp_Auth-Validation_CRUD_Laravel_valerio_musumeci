@@ -74,14 +74,12 @@
   
         <!-- Section: Text -->
         <section class="mb-5">
-          <div class="row d-flex justify-content-center">
+          <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                distinctio earum repellat quaerat voluptatibus placeat nam,
-                commodi optio pariatur est quia magnam eum harum corrupti
-                dicta, aliquam sequi voluptate quas.
+                Necessiti di qualche entrata extra? 
               </p>
+              <a href="{{ route('become.revisor') }}" class="btn btn-become-revisor-custom text-main-light-color">Diventa Revisore</a>
             </div>
           </div>
         </section>

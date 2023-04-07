@@ -126,6 +126,18 @@ body{
     background-color: var(--accent-color);
   }
 
+  .btn-become-revisor-custom:hover{
+    color: var(--accent-color);
+  }
+
+  .btn-become-revisor-custom:focus{
+    color: var(--accent-color);
+  }
+
+  .btn-become-revisor-custom:active{
+    color: var(--accent-color);
+  }
+
   /* FINE CSS BUTTON */
 
   /* INIZIO CSS CAROUSEL */
