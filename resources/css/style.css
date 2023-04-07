@@ -21,6 +21,11 @@ body{
 .bg-dark-main-color{
   background-color: var(--dark-main-color);
 }
+.bg-light-color{
+  background-color: var(--main-light-color);
+}
+
+
 
 .text-main-light-color{
   color: var(--main-light-color);
@@ -89,9 +94,9 @@ body{
   padding-bottom: 174px; 
 }
 .page-title { 
-  font-size: 46px; 
+  font-size: 52px; 
   line-height: 1; 
-  color: #fff; 
+  color: var(--main-light-color); 
   font-weight: 600; 
   text-align: center; 
 }
