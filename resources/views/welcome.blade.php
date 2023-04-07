@@ -14,7 +14,7 @@
                 <div class="row align-content-center">
                 @foreach($announcements as $announcement)
                     <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
-                        <div class="card" style="width: 17rem;">
+                        <div class="card card-custom" style="width: 17rem;">
                             <img src="https://picsum.photos/200" class="card-img-top p-3" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{ $announcement->title }}</h5>

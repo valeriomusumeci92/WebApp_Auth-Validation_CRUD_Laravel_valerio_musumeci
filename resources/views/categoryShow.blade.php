@@ -13,7 +13,7 @@
             <div class="row align-content-center">
                 @forelse ($category->announcements->where('is_accepted' , true) as $announcement)
                 <div class="col-12 col-md-4 d-flex justify-content-center my-2">
-                    <div class="card text-center shadow" style="width: 18rem;">
+                    <div class="card card-custom text-center shadow" style="width: 18rem;">
                         <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"> {{$announcement->title}}</h5>

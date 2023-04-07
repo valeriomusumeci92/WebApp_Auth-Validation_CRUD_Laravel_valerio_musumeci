@@ -16,13 +16,13 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}} </h5>
                         <p class="card-text">{{$announcement->body}}  </p>
-                        <a href="{{ route('announcements.show' , compact ('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
                         <a href="{{route('categoryShow' , ['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-category-custom">Categoria: {{ $announcement->category->name }}</a>
+                        <a href="{{ route('announcements.show' , compact ('announcement'))}}" class="btn btn-go-to-custom shadow">Visualizza</a>
                         <p class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y')}}</p>
                     </div>
                 </div>
             </div>
-            @empy
+            @empty
             <div class="col-12">
                 <div class="alert alert-warning py-3 shadow">
                     <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare il nome del tuo annuncio</p>

@@ -20,4 +20,5 @@ class AnnouncementsController extends Controller
         return view ('announcements.index' , compact('announcements'));
     }
 
+    
 }
