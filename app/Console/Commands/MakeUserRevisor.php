@@ -29,7 +29,7 @@ class MakeUserRevisor extends Command
         parent::__construct();
     }
 
-    public function handle(): void
+    public function handle()
     {
         $user = User::where('email' , $this->argument('email'))->first();
 
