@@ -31,7 +31,7 @@
             <a class="nav-link text-light-custom" href="{{ route ('register')}}">Registrati</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-warning" href="{{ route ('login')}}">Login</a>
+            <a class="nav-link btn text-main-light-color" href="{{ route ('login')}}">Login</a>
           </li>
            {{-- logica di visualizzazione se l'utente è loggato --}}
          @else

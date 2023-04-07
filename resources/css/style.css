@@ -1,5 +1,6 @@
 :root{
    --main-color: #264653;
+   --dark-main-color: #102f3b;
    --main-light-color: #f8f7f7;
    --secondary-color: #f4a261 ;
    --tertiary-color: #2a9d8f;
@@ -11,6 +12,10 @@
 }
 .bg-main-color{
   background-color: var(--main-color);
+}
+
+.bg-dark-main-color{
+  background-color: var(--dark-main-color);
 }
 
 .text-main-light-color{
@@ -97,7 +102,7 @@ body{
 
   /* INIZIO CSS CARD */
 
-  .card{
+  .card-custom{
     border-radius: 25px;
     background-color: var(--main-color);
     color: var(--main-light-color);
@@ -136,6 +141,17 @@ body{
   
   /* INIZIO CSS FOOTER */
 
-
+  .footer-link{
+    color:var(--main-light-color)
+  }
+  .footer-link:hover{
+    color: var(--secondary-color);
+  }
+  .footer-link:focus{
+    color: var(--secondary-color);
+  }
+  .footer-link:active{
+    color: var(--secondary-color);
+  }
 
   /* FINE CSS FOOTER */
