@@ -20,6 +20,19 @@ class FrontController extends Controller
         return view('categoryShow' , compact('category'));
     }
 
-    
-    
+    public function becomeRevisor()
+    {
+	Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+    return redirect()->back()->with('message' , 'Complimenti! Hai richiesto di diventare revisore correttamente');
+    }
+    Public function  makeRevisor (User $user)
+    {
+	Artisan::call('presto:make-user-revisor' , ["email"=>$user->email]);
+	return redirect('/')->with('message.revisor' , "Complimenti! L'utente è diventato revisore");
+    }
+    public function searchAnnouncements (Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted' , true)->paginate(10);
+
+        return view('announcements.index' , compact('announcements'));
+    }
 }
