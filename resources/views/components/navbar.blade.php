@@ -5,7 +5,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             {{-- fortyfi ha una rotta home definita nella sua config nell'HREF QUA indico solo / questo slash,uri, si rifà alla rotta presente in fotyfi che trovo in cartella Providers -> RouteServiceProviders e lasciare solo / --}}
@@ -39,8 +39,8 @@
           <a class="nav-link text-light-custom" href="{{ route ('announcements.create') }}">Crea Annuncio</a>
         </li>
         @if (Auth::user()->is_revisor)
-        <li class="nav-item">
-          <a class="nav-link text-main-light-color position-relative" href="{{ route('revisor.index') }}">Zona revisore</a>
+        <li class="nav-item position-relative">
+          <a class="nav-link text-main-light-color btn btn-sm btn-outline-primary" href="{{ route('revisor.index') }}">Zona revisore</a>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {{App\Models\Announcement::toBeRevisionedCount()}}
             <span class="visually-hidden"> unread messages </span>
