@@ -1,5 +1,5 @@
 <x-layout>
-  
+{{--   
   <div class="container-fluid padding-top-custom ps-md-0">
     <div class="row g-0">
       <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
@@ -44,26 +44,36 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
-  <div class="container container-reg-custom">
+  <div class="container container-reg-custom AltezzaLogin">
     <div class="wrapper">
       <div class="title"><span>Login Form</span></div>
-      <form action="#">
+      <form method="POST" action="{{ route ('login') }}">
+        @csrf
+        @if ($errors->any())
+         <div class="alert alert-danger">
+          <ul>
+           @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+           @endforeach
+            </ul>
+              </div>
+                @endif
+                
         <div class="row">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Email" required>
+          <input name="email" type="email" class="form-control" id="name" placeholder="Email adress">
         </div>
         <div class="row">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" required>
+          <input name="password" type="password" class="form-control" id="password" placeholder="Password">
         </div>
-        <div class="pass"><a href="#">Forgot password?</a></div>
         <div class="row button">
           <input type="submit" value="Login">
         </div>
-        <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+        <div class="signup-link">Non sei un membro? <a href="{{ route('register') }}">Registrati</a></div>
       </form>
     </div>
   </div>

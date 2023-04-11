@@ -86,6 +86,7 @@ body{
   background: url(https://easetemplate.com/free-website-templates/hike/images/pageheader.jpg)no-repeat;
   position: relative; 
   background-size: cover; 
+  height: 45vh;
 }
 .page-caption { 
   padding-top: 170px; 
@@ -104,7 +105,7 @@ body{
   bottom: 60px; 
 }
 .card-block { 
-  padding: 80px; 
+  padding: 50px; 
 }
 .section-title { 
   margin-bottom: 60px; 
@@ -133,6 +134,21 @@ body{
     letter-spacing: 0.05rem;
     padding: 0.75rem 1rem;
   }
+  
+  .AltezzaLogin{
+    position: relative; 
+    bottom: 150px; 
+  }
+
+
+  /* Register */
+
+  .AltezzaRegister{
+    position: relative; 
+    bottom: 50px; 
+  }
+  
+  /* fine register */
 
   /* INIZIO CSS CARD */
 
@@ -171,6 +187,7 @@ body{
   .btn-become-revisor-custom:active{
     color: var(--accent-color);
   }
+
 
   /* FINE CSS BUTTON */
 
@@ -303,3 +320,14 @@ body{
 
 
    /* FINE CSS LOGIN */
+
+  /* Inizio Register */
+
+   .ModificaRegister{
+    background-color: #102f3b;
+    position: relative;
+    bottom: 50px; 
+
+   }
+
+   /* Fine Rigister */
