@@ -40,7 +40,7 @@
         </li>
         @if (Auth::user()->is_revisor)
         <li class="nav-item position-relative">
-          <a class="nav-link text-main-light-color btn btn-sm btn-outline-primary" href="{{ route('revisor.index') }}">Zona revisore</a>
+          <a class="nav-link text-main-light-color btn btn-sm btn-outline-light" href="{{ route('revisor.index') }}">Zona revisore</a>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {{App\Models\Announcement::toBeRevisionedCount()}}
             <span class="visually-hidden"> unread messages </span>
