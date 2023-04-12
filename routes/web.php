@@ -48,3 +48,7 @@ Route::get('/rendi/revisore/{user}' , [RevisorController::class , 'makeRevisor']
 // Ricerca annuncio
 
 Route::get('/ricerca/annuncio' , [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
+
+// Lingua
+
+Route::post('/lingua/{lang}' , [FrontController::class, 'setLanguage'])->name('setLocale');

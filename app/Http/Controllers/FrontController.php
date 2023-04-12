@@ -36,4 +36,9 @@ class FrontController extends Controller
 
         return view('announcements.index' , compact('announcements'));
     }
+
+    public function setLanguage($lang){
+        session()->put('locale' , $lang);
+        return redirect()->back();
+    }
 }

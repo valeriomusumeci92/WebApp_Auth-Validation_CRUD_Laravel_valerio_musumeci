@@ -14,6 +14,11 @@
           <li class="nav-item">
             <a class="nav-link text-light-custom" href="{{ route('announcements.index') }}">Annunci</a>
           </li>
+          
+            <x-_locale lang="it" />
+            <x-_locale lang="en" />
+            <x-_locale lang="es" />
+        
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light-custom" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorie
