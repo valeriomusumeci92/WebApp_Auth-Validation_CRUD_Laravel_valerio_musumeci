@@ -29,6 +29,8 @@ class CreateAnnouncement extends Component
         'body' => 'required|min:8',
         'category'=>'required',
         'price' => 'required|numeric',
+        'images.*'=> 'image|max:1024',
+        'temporary_images.*'=>'image|max:1024',
 
     ];
 
@@ -36,7 +38,34 @@ class CreateAnnouncement extends Component
         'required' =>'il campo :attribute è richiesto',
         'min' =>'il campo :attribute è corto',
         'numeric' => 'il campo :attribut dev\'essere un numero',
+        'temporary.images.required' => "L'immagine è richiesta",
+        'temporary.images.*.image' => "I file devono essere immagini",
+        'temporary.images.*.max' => "L'immagine deve essere massimo di 1MB",
+        'images.images' => "L'immagine deve essere un immagine",
+        'images.max' => "L'immagine deve essere massimo 1MB",
+
+
     ];
+
+    public function updatedTemporaryImages(){
+       
+        if($this->validate([
+            'temporary_images.*' =>'image|max:1024',
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key){
+        
+        if(in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
+
+
 
     public function store (){
 
@@ -65,7 +94,7 @@ class CreateAnnouncement extends Component
 
         Auth::user()->announcements()->save($announcement);
 
-        session()->flash('message' , 'Annuncio inserito con successo');
+        session()->flash('message' , 'Annuncio inserito con successo, sarà pubblicato dopo la revisione');
         $this->cleanForm();
     }
 
@@ -78,9 +107,11 @@ class CreateAnnouncement extends Component
         $this->body = '';
         $this->price = '';
         $this->category = '';
-            
+        $this->image = '';
+        $this->image = [];
+        $this->temporary_images = [];
+        $this->form_id = '';            
     }
-
 
     public function render()
     {
