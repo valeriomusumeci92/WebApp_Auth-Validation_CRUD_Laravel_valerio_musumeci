@@ -5,6 +5,10 @@
             <div class="col-12">
                 <div class="page-caption">
                     <h1 class="page-title">Presto.it</h1>
+                    <form action="{{ route('announcements.search')}}" method="GET" class="d-flex pt-2" role="search">
+                        <input name="searched" class="form-control me-2 searchbar-custom" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-searchbar-custom" type="submit"><i class="fa-solid fa-magnifying-glass d-md-none"></i> <span class="d-none d-md-inline">Search</span></button>
+                    </form>
                 </div>
             </div>
         </div>

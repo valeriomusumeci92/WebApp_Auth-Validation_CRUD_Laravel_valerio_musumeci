@@ -93,6 +93,14 @@ body{
   padding-top: 170px; 
   padding-bottom: 174px; 
 }
+
+@media screen and (max-width: 500px){
+  .page-caption{
+    padding-top: 130px;
+  }
+
+}
+
 .page-title { 
   font-size: 52px; 
   line-height: 1; 
@@ -113,6 +121,16 @@ body{
 }
 
 /* FINE CSS HEADER */
+
+/* INIZIO CSS SEARCHBAR */
+
+.searchbar-custom{
+  border-radius: 50px;
+  background-color: #ffffff70;
+  color: var(--tertiary-color);
+}
+
+/* FINE CSS SEARCHBAR */
 
 /* Immagine degli annunci */
 
@@ -251,6 +269,34 @@ body{
     background-color: var(--refuse-color);
     color: var(--main-color);
     width: 100%;
+  }
+
+  .btn-searchbar-custom{
+    width: 15%;
+    background-color: var(--tertiary-color);
+    color: var(--body-color);
+    border-radius: 50px;
+  }
+
+  .btn-searchbar-custom:hover{
+    width: 15%;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    border-radius: 50px;
+  }
+
+  .btn-searchbar-custom:focus{
+    width: 15%;
+    background-color: var(--tertiary-color);
+    color: var(--main-light-color);
+    border-radius: 50px;
+  }
+
+  .btn-searchbar-custom:active{
+    width: 15%;
+    background-color: var(--tertiary-color);
+    color: var(--main-light-color);
+    border-radius: 50px;
   }
 
   /* FINE CSS BUTTON */

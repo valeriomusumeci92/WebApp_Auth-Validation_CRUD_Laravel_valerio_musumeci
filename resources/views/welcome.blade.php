@@ -20,7 +20,7 @@
                               <h5 class="card-title">{{ $announcement->title }}</h5>
                               <p class="card-text">{{ $announcement->body }}</p>
                               <p class="card-text">{{ $announcement->price }} €</p>
-                              <a href="" class="btn btn-category-custom my-2 py-2 border-dark shadow" >Categoria {{ $announcement->category->name }} </a>
+                              <a href="" class="btn btn-category-custom my-2 py-2 border-dark shadow" >{{ $announcement->category->name }} </a>
                               <a href="{{ route('announcements.show' , compact('announcement'))}}" class="btn btn-go-to-custom my-2 border-dark shadow">Visualizza</a>
                               <p>Pubblicato il : {{ $announcement->created_at->format('d/m/Y') }}</p>
                             </div>

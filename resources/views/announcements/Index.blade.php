@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}} </h5>
                         <p class="card-text">{{$announcement->body}}  </p>
-                        <a href="{{route('categoryShow' , ['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-category-custom">Categoria: {{ $announcement->category->name }}</a>
+                        <a href="{{route('categoryShow' , ['category'=>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-category-custom">{{ $announcement->category->name }}</a>
                         <a href="{{ route('announcements.show' , compact ('announcement'))}}" class="btn btn-go-to-custom shadow">Visualizza</a>
                         <p class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y')}}</p>
                     </div>
