@@ -15,7 +15,7 @@
                 @foreach($announcements as $announcement)
                     <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
                         <div class="card card-custom" style="width: 17rem;">
-                            <img src="https://picsum.photos/200" class="card-img-top p-3" alt="...">
+                            <img src="{{ !$announcement->images()->get()->isEmpty() ?$announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200'}}" class="card-img-top p-3 rounded" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{ $announcement->title }}</h5>
                               <p class="card-text">{{ $announcement->body }}</p>

@@ -113,6 +113,14 @@ body{
 
 /* FINE CSS HEADER */
 
+/* Immagine degli annunci */
+
+.img-preview{
+  width: 50%;
+  height: 50vh;
+}
+
+
 /* css login  */
 
 .login {
