@@ -6,6 +6,7 @@
    --secondary-color: #f4a261 ;
    --tertiary-color: #2a9d8f;
    --accent-color: #e9c46a;
+   --refuse-color: #e76f51;
 }
 
 body{
@@ -170,6 +171,14 @@ body{
 
   /* INIZIO CSS BUTTON */
 
+  .btn-revisor-custom{
+    border: 1px solid var(--main-light-color);
+  }
+
+  .btn-revisor-custom:hover{
+    border: 1px solid var(--secondary-color);
+  }
+
   .btn-category-custom{
     background-color: var(--secondary-color);
     width: 80%;
@@ -196,6 +205,53 @@ body{
     color: var(--accent-color);
   }
 
+  .btn-accept-custom{
+    background-color: var(--tertiary-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-accept-custom:hover{
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-accept-custom:focus{
+    background-color: var(--tertiary-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-accept-custom:active{
+    background-color: var(--tertiary-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-refuses-custom:hover{
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-refuses-custom:focus{
+    background-color: var(--refuse-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-refuses-custom:active{
+    background-color: var(--refuse-color);
+    color: var(--main-color);
+    width: 100%;
+  }
+
+  .btn-refuses-custom{
+    background-color: var(--refuse-color);
+    color: var(--main-color);
+    width: 100%;
+  }
 
   /* FINE CSS BUTTON */
 
