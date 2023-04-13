@@ -85,15 +85,17 @@ class CreateAnnouncement extends Component
 
             $newFileName = "announcements/{$this->announcement->id}";
             $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName , 'public')]);
+            
 
             dispatch(new ResizeImage($newImage->path , 400 , 300));
+            
         }
-
+        
         File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        
     }
 
         Auth::user()->announcements()->save($this->announcement);
-
         session()->flash('message' , 'Annuncio inserito con successo, sarà pubblicato dopo la revisione');
         $this->cleanForm();
     }
@@ -107,7 +109,7 @@ class CreateAnnouncement extends Component
         $this->body = '';
         $this->price = '';
         $this->category = '';
-        $this->image = [];
+        $this->images = [];
         $this->temporary_images = []; 
     }
 
