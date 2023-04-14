@@ -15,9 +15,7 @@
             <a class="nav-link text-light-custom" href="{{ route('announcements.index') }}">Annunci</a>
           </li>
           
-            <x-_locale lang="it" />
-            <x-_locale lang="en" />
-            <x-_locale lang="es" />
+            
         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light-custom" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,6 +74,9 @@
           
         @endguest
         </ul>
+        <x-_locale lang="it" />
+        <x-_locale lang="en" />
+        <x-_locale lang="es" />
         {{-- <form action="{{ route('announcements.search')}}" method="GET" class="d-flex" role="search">
           <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
