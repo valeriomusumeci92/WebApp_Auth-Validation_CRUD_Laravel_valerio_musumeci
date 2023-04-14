@@ -49,7 +49,7 @@
 
   <div class="container container-reg-custom AltezzaLogin">
     <div class="wrapper">
-      <div class="title"><span>Login Form</span></div>
+      <div class="title"><span>Login</span></div>
       <form method="POST" action="{{ route ('login') }}">
         @csrf
         @if ($errors->any())
