@@ -20,6 +20,33 @@
           @if ($announcement_to_check->images)
           <div class="carousel-inner">
             @foreach ($announcement_to_check->images as $image)
+            <div class="card md-3">
+              <div class="row p-2">
+                <div class="col-12 col-md-6">
+                  <img src="{{ $image->getUrl(400,300) }}" class="img-fluid p-3 rounded" alt="">
+                </div>
+                <div class="col-md-3 border-end">
+                  <h5 class="tc-accent mt-3">Tags</h5>
+                  <div class="p-2">
+                    @if ($image->labels)
+                    @foreach ($image->labels as $label)
+                    <p class="d-inline">{{ $label }},</p>
+                    @endforeach
+                    @endif
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card-body">
+                <h5 class="tc-accent"> Revisione immagini</h5>
+                <p>Adulti: <span class=" {{ $image->adult }}"></span></p>
+                <p>Satira: <span class=" {{ $image->spoof }}"></span></p>
+                <p>Medicina: <span class=" {{ $image->medicine }}"></span></p>
+                <p>Violenza: <span class=" {{ $image->violence }}"></span></p>
+                <p>Contenuto Ammiccante: <span class=" {{ $image->racy }}"></span></p>
+              </div>
+            </div>
             <div class="carousel-item @if($loop->first) active @endif">
               <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded" alt="...">
             </div>

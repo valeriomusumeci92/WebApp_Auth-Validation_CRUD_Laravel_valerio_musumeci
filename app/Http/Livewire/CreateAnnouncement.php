@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -88,6 +89,8 @@ class CreateAnnouncement extends Component
             
 
             dispatch(new ResizeImage($newImage->path , 400 , 300));
+            dispatch(new GoogleVisionSafeSearch($newImage->id));
+
             
         }
         
