@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title mb-0">
-                        <h2>Compra spesso, vendi adesso</h2>
+                        <h2>{{__('ui.sell')}}</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti esse, expedita repudiandae sequi veritatis, laudantium sit ad dolor voluptatum, voluptatibus qui nihil! Ullam, praesentium modi quia voluptatibus ratione vitae illo? </p>
                     </div>
                 </div>
