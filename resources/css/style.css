@@ -111,13 +111,13 @@ body{
 
 .card-section { 
   position: relative; 
-  bottom: 60px; 
+  bottom: 45px; 
 }
 .card-block { 
   padding: 50px; 
 }
 .section-title { 
-  margin-bottom: 60px; 
+  margin-bottom: 50px; 
 }
 
 /* FINE CSS HEADER */
@@ -137,6 +137,10 @@ body{
 .img-preview{
   width: 50%;
   height: 50vh;
+  background-position: center !important;
+ background-size: cover !important;
+  background: no-repeat;
+  background-color: #e76f51;
 }
 
 
@@ -441,3 +445,12 @@ body{
    }
 
    /* Fine Rigister */
+
+
+   .test{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+
+   }
